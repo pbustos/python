@@ -1,0 +1,85 @@
+{
+    "explotacion":{
+        "nombre": "La Rinconada",
+        "propietario": "Pia"
+	},
+	"persistencia":{
+		"database":"mongodb",
+		"node":"http://localhost:2020",
+		"access key":"always yours"
+	},
+    "cercas":[
+        {
+			"id": "cerca1",
+			"polilinea": [
+				{
+					"x":"23312", 
+					"y":"12312"
+				},
+				{
+					"x":"546345",
+					"y":"345334"
+				}
+			],
+			"superficie": "45Ha",
+			"tipo-suelo": "ds",
+			"contenido-suelo": [],
+			"labores": []
+		},
+		{
+			"id": "cerca2",
+			"polilinea": ["23312" , "12312", "546345" ],
+			"superficie": "45Ha",
+			"tipo-suelo": "ds",
+			"contenido-suelo": [],
+			"labores":[]
+		}
+	],
+	"puntos-de-agua":[
+        {
+			"id": "charca1",
+			"polilinea": [
+				{
+					"x":"23312", 
+					"y":"12312"
+				},
+				{
+					"x":"546345",
+					"y":"345334"
+				}
+			],
+			"superficie": "50m2",
+			"volumen":"20m3",
+			"tipo": "excavada",
+			"calidad-agua": [],
+			"nivel-llenado":"30%"
+		}
+	],
+    "ovejas":[
+		{
+			"id":"34423",
+			"raza":"merina",
+			"fecha-nacimiento":"34/12/1032",
+			"lote":"l1",
+			"parameters": []
+		},
+		{
+			"id":"34424",
+			"raza":"merina",
+			"fecha-nacimiento":"14/12/1032",
+			"lote":"l1",
+			"parameters": []
+		}
+	],
+	"estacion meteorologica":[
+		{
+			"AEMET":"http://www.aemet.es/xml"
+		},
+		{
+			"OpenWeatherMap":"http://openweathermap.org/api"
+		},
+		{
+			"Tiempo":"http://api.tiempo.es"
+		}
+	]
+}

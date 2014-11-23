@@ -2,18 +2,21 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import Image
+import json
 
 from PySide import QtGui, QtCore
 print QtGui.__file__
 from ui_demain import Ui_Demain
 from mapviewer import MapViewer
+from pprint import pprint
 
 class MainWindow(QtGui.QWidget, Ui_Demain):
 	def __init__(self, parent=None):
 		super(MainWindow, self).__init__(parent)
 		self.setupUi(self)
 		self.show()
+		
+		self.readConfigurationJSON("config.json")
 		
 		self.scene = QtGui.QGraphicsScene(self)
 		self.mapViewer = MapViewer(self.scene, self.scrollArea)
@@ -61,7 +64,11 @@ class MainWindow(QtGui.QWidget, Ui_Demain):
 	def calendarChanged(self,date):
 		self.dateEdit.setDate(date)
 		self.timeSlider.setValue(QtCore.QDate.currentDate().daysTo(date))
-	
+		
+	def readConfigurationJSON(self, file):
+		with open(file, 'r') as fileJson:
+			data = json.load(fileJson)
+		pprint(data)
     
 if __name__ == '__main__':
 	app = QtGui.QApplication(sys.argv)
