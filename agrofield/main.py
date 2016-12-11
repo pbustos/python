@@ -3,7 +3,6 @@
 
 import sys
 import json
-
 from PySide import QtGui, QtCore
 print QtGui.__file__
 from ui_demain import Ui_Demain

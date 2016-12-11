@@ -8,7 +8,11 @@
 		"node":"http://localhost:2020",
 		"access key":"always yours"
 	},
-    "cercas":[
+	"mapa-general":{
+		"path-al-mapa":"sdfas",
+		"sistema-coordenadas":"eECCD"
+	},
+      "cercas":[
         {
 			"id": "cerca1",
 			"polilinea": [
